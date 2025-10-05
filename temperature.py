@@ -1,0 +1,43 @@
+def CtoK(celsius):
+    kelvin = celsius + 273.15
+    return kelvin
+def KtoC(kelvin):
+    celsius = kelvin - 273.15
+    return celsius
+def FtoC(fahrenheit):
+    celsius = (fahrenheit - 32) * 5.0/9.0
+    return celsius
+def FtoK(fahrenheit):
+    celsius = FtoC(fahrenheit)
+    kelvin = CtoK(celsius)
+    return kelvin   
+def CtoF(celsius):
+    fahrenheit = (celsius * 9.0/5.0) + 32
+    return fahrenheit   
+def KtoF(kelvin):
+    celsius = KtoC(kelvin)
+    fahrenheit = CtoF(celsius)
+    return fahrenheit
+print("Temperature Conversion Tool")
+print("1. Celsius to Kelvin")
+print("2. Kelvin to Celsius")   
+print("3. Fahrenheit to Celsius")
+print("4. Fahrenheit to Kelvin")
+print("5. Celsius to Fahrenheit")
+print("6. Kelvin to Fahrenheit")
+choice = input("Select conversion (1-6): ")
+if choice in ['1', '2', '3', '4', '5', '6']:
+    temp = float(input("Enter temperature to convert: "))
+    if choice == '1':
+        print(f"{temp}°C is {CtoK(temp)}K")
+    elif choice == '2':
+        print(f"{temp}K is {KtoC(temp)}°C")
+    elif choice == '3':
+        print(f"{temp}°F is {FtoC(temp)}°C")
+    elif choice == '4':
+        print(f"{temp}°F is {FtoK(temp)}K")
+    elif choice == '5':
+        print(f"{temp}°C is {CtoF(temp)}°F")
+    elif choice == '6':
+        print(f"{temp}K is {KtoF(temp)}°F")
+        
