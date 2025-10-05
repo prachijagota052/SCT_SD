@@ -40,4 +40,7 @@ if choice in ['1', '2', '3', '4', '5', '6']:
         print(f"{temp}°C is {CtoF(temp)}°F")
     elif choice == '6':
         print(f"{temp}K is {KtoF(temp)}°F")
+else:
+    print("Invalid choice.")
+
         
